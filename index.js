@@ -25,4 +25,3 @@ function calculoDoNivel(vitorias, derrotas) {
 const { historicoDePartida, nivel } = calculoDoNivel(86,26)
    //mensagem final
         console.log(`O herói tem um saldo de ${historicoDePartida} e está no nível ${nivel}`)
-}
