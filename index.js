@@ -1,8 +1,6 @@
-calcularNivel(86, 26)
-
-function calcularNivel(vitorias, derrotas) {
+function calculoDoNivel(vitorias, derrotas) {
 	//calcula o saldo de rankeadas
-    let saldoVitorias = vitorias - derrotas
+    let historicoDePartida= vitorias - derrotas
     //determina o nível com base na quantidade de vitórias
     let nivel
     //estrutura de decisão
@@ -21,6 +19,10 @@ function calcularNivel(vitorias, derrotas) {
 	}else{
 		nivel = "Imortal"
 	}
-    //mensagem final
-    console.log(`O herói tem um saldo de ${saldoVitorias} e está no nível ${nivel}`)
+	return { historicoDePartida, nivel}
+ }
+
+const { historicoDePartida, nivel } = calculoDoNivel(86,26)
+   //mensagem final
+        console.log(`O herói tem um saldo de ${historicoDePartida} e está no nível ${nivel}`)
 }
